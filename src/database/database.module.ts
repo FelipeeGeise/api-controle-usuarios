@@ -26,7 +26,9 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
           password,
           database,
           entities: [__dirname + '/../**/*.entity.{js,ts}'],
+          migrations: [__dirname + '/../migrations/*.{js,ts}'],
           synchronize: sync,
+          migrationsRun: true,
         };
       },
     }),
